@@ -1,0 +1,57 @@
+.btn {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    width: fit-content;
+    margin: 0.5em 1em;
+    font-weight: bold;
+    padding: 0.2em 1em;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn > a:visited,
+.btn > a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn > form {
+    margin: unset;
+}
+
+.btn > form > input[type="submit"] {
+    background-color: unset;
+    border: unset;
+    color: unset;
+    font-size: unset;
+    padding: unset;
+    appearance: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn > form > input[type="submit"]:focus {
+    outline: none;
+}
+
+.paper {
+    box-shadow: 4px 5px 4px 2px #aaa;
+    padding: 2em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    min-height: 50vh;
+
+    margin: 1em 2em;
+}

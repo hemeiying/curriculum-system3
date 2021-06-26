@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>班级成绩</title>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                min-width: 5em;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <table style="margin-bottom:10px" >
+            <tr>
+                <th>班级名</th>                
+                <th>学生姓名</th>
+                <th>课程</th>
+                <th>成绩</th>
+            </tr>      
+            {% for item in items9 %}
+            <tr>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+                <td>{{ item[3] }}</td>              
+            </tr>
+            {% endfor %}
+        </table>
+        <form action="/manger3" method="get" >
+            <input type="submit" value="返回">
+        </form>
+
+    </body>
+</html>

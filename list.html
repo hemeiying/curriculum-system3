@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>成绩单</title>
+        <style>
+        body {
+              margin: 100px;
+            }
+            
+            table {
+                border-collapse: collapse;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                min-width: 5em;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <table width="30%" style="margin-bottom:40px" >
+            <tr>
+                <th>姓名:{{ items2[0][0] }}</th>
+                <th>学号:{{ items2[0][1] }}</th>
+                <th>班级:{{ items2[0][2] }}</th>
+            </tr>
+        </table>
+
+        <form action="/student/semester" method="post">
+            学期: <input type="text" name="semester">
+            <input type="submit" value="查询">
+        </form>
+
+        <table style="margin-bottom:10px" >
+            <tr>
+                <th>课程名</th>
+                <th>课程时间</th>
+                <th>成绩</th>
+            </tr>      
+            {% for item in items2 %}
+            <tr>
+                <td>{{ item[3] }}</td>
+                <td>{{ item[4] }}</td>
+                <td>{{ item[5]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <form action="/logout" method="post" >
+            <input type="submit" value="退出登录">
+        </form>
+    </body>
+</html>

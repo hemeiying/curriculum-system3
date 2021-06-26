@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>班级成绩</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                flex-direction: column;
+                margin: 0;
+                min-height: 100vh;
+                background-color: white;
+                z-index: 1;
+
+    display: flex;
+    align-items: center;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                min-width: 5em;
+                align-self: baseline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="/manger" method="get" >
+            <input type="submit" value="返回">
+        </form>
+        <form action="/manger/results" method="post">
+            班级: <input type="text" name="semester">
+            <input type="submit" value="查询">
+        </form>
+        <table style="margin-bottom:10px" >
+            <tr>
+                <th>班级名</th>                
+                <th>学生姓名</th>
+                <th>课程</th>
+                <th>成绩</th>
+            </tr>      
+            {% for item in items8 %}
+            <tr>
+                <td>{{ item[0] }}</td>
+                <td>{{ item[1] }}</td>
+                <td>{{ item[2] }}</td>
+                <td>{{ item[3] }}</td>              
+            </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>

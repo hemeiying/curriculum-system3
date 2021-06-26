@@ -1,0 +1,1 @@
+SELECT sn,no,name,teacher,data from course
